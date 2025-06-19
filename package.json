@@ -4,7 +4,7 @@
   "description": "Simple static website for Coolify deployment",
   "main": "index.html",
   "scripts": {
-    "build": "echo 'Static site - no build step required'",
+    "build": "mkdir -p dist && cp *.html dist/",
     "start": "echo 'Static site - will be served by nginx via Coolify'"
   },
   "keywords": ["static", "html", "coolify"],
