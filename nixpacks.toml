@@ -1,2 +1,11 @@
 # Static site configuration for Nixpacks
 [variables]
+# Tell Nixpacks where the static files are located
+NIXPACKS_BUILD_CMD = "cp *.html /app/dist/ || mkdir -p /app/dist && cp *.html /app/dist/"
+
+[phases.build]
+# Create dist directory and copy static files
+cmds = [
+    "mkdir -p dist",
+    "cp *.html dist/"
+]
